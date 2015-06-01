@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		.container{width:900px;margin:0 auto; }
+		.pic,.mask{width: 400px;height: 400px;}
+		.pic{
+			background:  url(img/p03.jpg) no-repeat;background-position: 50% 50%;
+			/*-webkit-background-size:auto;*/
+			background-size:cover;
+			position: absolute;
+			border-radius: 50%;
+		}
+		.mask{background-color: rgba(255,0,0,0);position: absolute;color:rgba(255,255,255,0);border-radius: 50%;text-align: center;transition:all 1s ease;-webkit-transition:all 1s ease;
+		}
+		.text{position: absolute;width: 100%;top: 50%;}
+		.container:hover .mask{background-color:rgba(255,0,0,0.3);color:rgba(255,255,255,1);
+/*			transition:all 1s;
+			-webkit-transition:all 1s;
+		*/			}
+		.border{position:absolute; border:10px solid white; border-top-color: black;height: 400px;width:400px;transition:all 1s;-webkit-transition:all 1s;border-radius: 50%;margin-left: -10px; margin-top: -10px;}
+		.container:hover .border{transform:rotate(540deg);-webkit-transform:rotate(540deg);border-top-color: red;}
+	</style>
+
+
+</head>
+<body>
+animation
+	<div class="container">
+
+		<div class="pic">
+			<!-- <img src="img/p02.jpg" alt="图挂了"> -->
+		</div>
+		
+		<div class="mask" id="mask">
+			<div class="text">
+				<h1>hello world</h1>
+				<p>你好世界</p>
+			</div>
+			<div class="border"></div>
+		</div>
+	</div>	
+</body>
+</html>
